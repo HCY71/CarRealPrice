@@ -27,6 +27,7 @@ export default {
   },
   created(){
     this.loadCarModelDatas();
+    this.loadPostDatas();
   }
 }
 </script>
@@ -34,6 +35,10 @@ export default {
 
 <style lang="scss">
 
+*{
+  box-sizing: border-box;
+  position: relative;
+}
 html, body{
   width: 100%;
   height: 100vh;

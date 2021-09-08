@@ -26,18 +26,6 @@ const store = createStore({
       context.commit('setPostsDatas', postDatas);
     }
   },
-  // getters: {
-  //   getToyotaChild(state) {
-  //     var output = [];
-  //     for (var i = 0; i < state.toyotaModel.length; i++) {
-  //       output.push({
-  //         label: state.toyotaModel[i],
-  //         key: state.toyotaModel[i]
-  //       })
-  //     }
-  //     return output;
-  //   }
-  // }
 })
 
 export default store

@@ -30,50 +30,45 @@ export default {
 </script>
 
 <style lang="scss">
-$colorDivider: #e5e5e5;
-$colorRegularFont: #4a4a4a;
-$colorButton: #18a058;
-$pagePadding: 3vw;
-$gridWidth: 10vw;
-$gridSpan: 1vw;
 
-* {
-  position: relative;
-}
+@use "../assets/css/base";
+
+
 #navbar,
 #navbar * {
   box-sizing: border-box;
-  // border: solid 1px;
 }
 #navbar {
   width: 100%;
-  padding: 0 $pagePadding;
+  padding: 0 base.$pagePadding;
   height: 50px;
-  border: solid 0.5px $colorDivider;
+  border: solid 0.5px base.$colorDivider;
   display: flex;
   align-items: center;
 }
 #navbar a.logo {
   display: flex;
   width: fit-content;
-  height: 30px;
-  margin-left: ($gridWidth+$gridSpan);
+  margin-left: (base.$gridWidth+base.$gridSpan);
+  img{
+    width: base.$gridWidth;
+  }
 }
 
 #navbar .n-input{
-  width: ($gridWidth+$gridSpan)*3;
-  margin-left: $gridWidth*0.5+$gridSpan;
+  width: (base.$gridWidth+base.$gridSpan)*3;
+  margin-left: base.$gridWidth*0.5+base.$gridSpan;
 }
 
 #navbar .n-space.controls{
   position: absolute;
   right: 0;
-  margin-right: ($gridWidth+$gridSpan) ;
+  margin-right: (base.$gridWidth+base.$gridSpan) ;
 }
 
 #navbar .n-space a{
   text-decoration: none;
-  color: $colorRegularFont;
+  color: base.$colorFontBlack-2;
 }
 
 </style>
