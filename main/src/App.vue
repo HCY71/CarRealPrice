@@ -1,13 +1,42 @@
 <template>
-  <div>
-    <div id="nav">
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> -->
-    </div>
+  <n-config-provider :theme="theme">
     <router-view />
-  </div>
+  </n-config-provider>
 </template>
 
-<style>
+<script>
+import{darkTheme, NConfigProvider} from 'naive-ui'
+import store from './store/store.js';
+import {mapState, mapMutations, mapActions} from 'vuex'
 
+export default {
+  setup() {
+    return{
+      theme: store.state.dark ? darkTheme : null
+    }
+  },
+  components:{
+    NConfigProvider
+  },
+  computed:{
+    ...mapState(['carModel'])
+  },
+  methods:{
+    ...mapMutations(['setCarModels','setPostDatas']),
+    ...mapActions(['loadCarModelDatas','loadPostDatas'])
+  },
+  created(){
+    this.loadCarModelDatas();
+  }
+}
+</script>
+
+
+<style lang="scss">
+
+html, body{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 </style>
