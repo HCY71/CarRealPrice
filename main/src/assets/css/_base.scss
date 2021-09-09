@@ -1,0 +1,33 @@
+//colors
+$colorDivider: #e5e5e5;
+$colorFadedFont: #c4c4c4;
+$colorHoverFont: #18a058;
+$colorHoverBg: #e5f5ee;
+
+//font-colors
+$colorFontBlack-1: #C4C4C4;
+$colorFontBlack-2: #4a4a4a;
+$colorFontBlack-3: #101014;
+
+$colorButton: #18a058;
+
+//Layout
+$pagePadding: 3vw;
+
+$gridWidth: 10vw;
+$gridSpan: 1vw;
+
+
+//transition
+$transition: .5s;
+
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.n-layout-sider{
+    max-width: unset !important;
+    width: 100% !important;
+}
