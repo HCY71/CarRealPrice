@@ -12,17 +12,15 @@
 </template>
 
 <script>
-import { NButton, NSpace } from 'naive-ui'
+import { NButton, NSpace } from 'naive-ui';
 
 export default {
-    components: {
-      NButton,
-      NSpace
-    }
-}
+  components: {
+    NButton,
+    NSpace,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
+<style scoped></style>
