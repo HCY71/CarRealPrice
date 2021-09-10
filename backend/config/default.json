@@ -1,0 +1,4 @@
+{
+  "mongoURL": "mongodb+srv://user-test:WinChiu1206@webprogramingcourse.f8c11.mongodb.net/carRealPrice?retryWrites=true&w=majority",
+  "jwtSecret": "carRealToken"
+}
