@@ -1,11 +1,16 @@
 <template>
   <div id="navbar">
+<<<<<<< HEAD
     <router-link to="/" class="logo">
+=======
+    <router-link to="/About" class="logo">
+>>>>>>> 94131a93c5a12da5d54746758a9325b7ab2f9dc2
       <img src="@/assets/CarRealPrice.svg" alt="" />
     </router-link>
     <n-input type="text" size="small" placeholder="搜尋" />
     <n-space class="controls" align="center" justify="end" size="small">
       <n-space align="center" justify="end" size="large">
+<<<<<<< HEAD
         <router-link class="login" to="/Login">登入/註冊</router-link>
         <n-switch @update:value="$store.state.dark = !$store.state.dark" />
       </n-space>
@@ -13,12 +18,19 @@
       <n-button type="primary" ghost>
         <router-link class="newPost" to="/newPost"> 我要發表 </router-link>
       </n-button>
+=======
+        <router-link to="/Login">登入/註冊</router-link>
+        <n-switch @update:value="$store.state.dark = !$store.state.dark" />
+      </n-space>
+      <n-divider vertical />
+      <n-button type="primary" ghost>我要發表</n-button>
+>>>>>>> 94131a93c5a12da5d54746758a9325b7ab2f9dc2
     </n-space>
   </div>
 </template>
 
 <script>
-import { NInput, NSwitch, NButton, NSpace, NDivider } from "naive-ui";
+import { NInput, NSwitch, NButton, NSpace, NDivider } from 'naive-ui';
 
 export default {
   components: {
@@ -70,8 +82,16 @@ export default {
   margin-right: (base.$gridWidth + base.$gridSpan);
 }
 
+<<<<<<< HEAD
 #navbar .n-space a.login {
   text-decoration: none;
   color: base.$colorFontBlack-2;
 }
 </style>
+=======
+#navbar .n-space a {
+  text-decoration: none;
+  color: base.$colorFontBlack-2;
+}
+</style>
+>>>>>>> 94131a93c5a12da5d54746758a9325b7ab2f9dc2

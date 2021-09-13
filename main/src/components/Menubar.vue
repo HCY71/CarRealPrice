@@ -1,7 +1,7 @@
 <template>
   <div id="menubar">
     <n-layout has-sider content-style="max-height: 95vh">
-      <n-layout-sider :native-scrollbar="false" bordered >
+      <n-layout-sider :native-scrollbar="false" bordered>
         <ul>
           <div class="title">{{ $store.state.carModel.brand }}</div>
           <li
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { NLayout, NLayoutSider } from "naive-ui";
+import { NLayout, NLayoutSider } from 'naive-ui';
 
 export default {
   components: {
@@ -49,8 +49,8 @@ export default {
 <style lang="scss">
 @use "../assets/css/base";
 
-#menubar{
-  .n-scrollbar-content{
+#menubar {
+  .n-scrollbar-content {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -59,7 +59,7 @@ export default {
 #menubar ul {
   color: base.$colorFontBlack-2;
   padding: 0;
-  padding-right: base.$gridSpan+base.$gridSpan;
+  padding-right: base.$gridSpan + base.$gridSpan;
   width: fit-content;
   .title {
     font-size: 18px;
