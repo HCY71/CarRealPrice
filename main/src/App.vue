@@ -7,7 +7,7 @@
 <script>
 import{darkTheme, NConfigProvider} from 'naive-ui'
 import store from './store/store.js';
-import {mapState, mapMutations, mapActions} from 'vuex'
+import {mapState, mapActions} from 'vuex'
 
 export default {
   setup() {
@@ -22,12 +22,13 @@ export default {
     ...mapState(['carModel'])
   },
   methods:{
-    ...mapMutations(['setCarModels','setPostDatas']),
-    ...mapActions(['loadCarModelDatas','loadPostDatas'])
+    // ...mapMutations(['setCarModels','setPostDatas']),
+    ...mapActions(['loadCarModelDatas','loadPostDatas','updateTime'])
   },
   created(){
     this.loadCarModelDatas();
     this.loadPostDatas();
+    this.updateTime();
   }
 }
 </script>

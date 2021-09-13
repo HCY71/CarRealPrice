@@ -15,6 +15,16 @@ const routes = [
     path: '/:model',
     name: 'Model',
     component: () => import("../views/About")
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Login')
+  },
+  {
+    path: '/newPost',
+    name: 'NewPost',
+    component: () => import('../views/NewPost')
   }
 ]
 

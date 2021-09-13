@@ -1,17 +1,19 @@
 <template>
   <div id="navbar">
-        <router-link to="/About" class="logo">
-          <img src="@/assets/CarRealPrice.svg" alt="" />
-        </router-link>
-        <n-input type="text" size="small" placeholder="搜尋" />
-        <n-space class="controls" align="center" justify="end" size="small">
-            <n-space align="center" justify="end" size="large">
-                <router-link to="/Login">登入/註冊</router-link>
-                <n-switch @update:value="$store.state.dark = !$store.state.dark" />
-            </n-space>
-            <n-divider vertical/> 
-            <n-button type="primary" ghost>我要發表</n-button>
-        </n-space>
+    <router-link to="/" class="logo">
+      <img src="@/assets/CarRealPrice.svg" alt="" />
+    </router-link>
+    <n-input type="text" size="small" placeholder="搜尋" />
+    <n-space class="controls" align="center" justify="end" size="small">
+      <n-space align="center" justify="end" size="large">
+        <router-link class="login" to="/Login">登入/註冊</router-link>
+        <n-switch @update:value="$store.state.dark = !$store.state.dark" />
+      </n-space>
+      <n-divider vertical />
+      <n-button type="primary" ghost>
+        <router-link class="newPost" to="/newPost"> 我要發表 </router-link>
+      </n-button>
+    </n-space>
   </div>
 </template>
 
@@ -24,15 +26,13 @@ export default {
     NSwitch,
     NButton,
     NSpace,
-    NDivider
+    NDivider,
   },
 };
 </script>
 
 <style lang="scss">
-
 @use "../assets/css/base";
-
 
 #navbar,
 #navbar * {
@@ -49,26 +49,29 @@ export default {
 #navbar a.logo {
   display: flex;
   width: fit-content;
-  margin-left: (base.$gridWidth+base.$gridSpan);
-  img{
+  margin-left: (base.$gridWidth + base.$gridSpan);
+  img {
     width: base.$gridWidth;
   }
 }
-
-#navbar .n-input{
-  width: (base.$gridWidth+base.$gridSpan)*3;
-  margin-left: base.$gridWidth*0.5+base.$gridSpan;
+#navbar .newPost{
+  color: base.$colorFontButton;
+  text-decoration: none;
 }
 
-#navbar .n-space.controls{
+#navbar .n-input {
+  width: (base.$gridWidth + base.$gridSpan) * 3;
+  margin-left: base.$gridWidth * 0.5 + base.$gridSpan;
+}
+
+#navbar .n-space.controls {
   position: absolute;
   right: 0;
-  margin-right: (base.$gridWidth+base.$gridSpan) ;
+  margin-right: (base.$gridWidth + base.$gridSpan);
 }
 
-#navbar .n-space a{
+#navbar .n-space a.login {
   text-decoration: none;
   color: base.$colorFontBlack-2;
 }
-
 </style>

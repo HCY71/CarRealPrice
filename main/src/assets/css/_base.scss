@@ -9,6 +9,7 @@ $colorFontBlack-1: #C4C4C4;
 $colorFontBlack-2: #4a4a4a;
 $colorFontBlack-3: #101014;
 
+$colorFontButton: #18a058;
 $colorButton: #18a058;
 
 //Layout
@@ -20,6 +21,12 @@ $gridSpan: 1vw;
 
 //transition
 $transition: .5s;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
 
 .flexCenter{
     display: flex;
