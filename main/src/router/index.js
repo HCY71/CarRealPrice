@@ -15,7 +15,6 @@ const routes = [
   {
     path: '/:model',
     name: 'Model',
-<<<<<<< HEAD
     component: () => import("../views/About")
   },
   {
@@ -29,11 +28,6 @@ const routes = [
     component: () => import('../views/NewPost')
   }
 ]
-=======
-    component: () => import('../views/About'),
-  },
-];
->>>>>>> 94131a93c5a12da5d54746758a9325b7ab2f9dc2
 
 const router = createRouter({
   history: createWebHashHistory(),

@@ -22,23 +22,27 @@
                 <div class="title">品牌</div>
                 <n-select
                   class="selector"
-                  :value="value"
+                  v-model:value="$store.state.newPost.brand"
                   size="small"
-                  :options="options"
+                  placeholder="Toyota"
+                  :options="$store.getters.brandOptions"
+                  @update:value="$store.dispatch('setDefaultModelData')"
                 />
                 <div class="model">
                   <div class="subtitle">款式</div>
                   <n-select
                     class="selector"
-                    :value="value"
+                    v-model:value="$store.state.newPost.model"
+                    placeholder="RAV4"
                     size="small"
-                    :options="options"
+                    :options="$store.getters.modelOptions"
                   />
                   <n-select
                     class="selector"
-                    :value="value"
+                    v-model:value="$store.state.newPost.model"
+                    placeholder="2.5 Hybrid旗艦 4WD"
                     size="small"
-                    :options="options"
+                    :options="$store.getters.modelOptions"
                   />
                 </div>
               </div>
@@ -55,9 +59,9 @@
                 <div class="title">詢價地點</div>
                 <n-select
                   class="selector"
-                  :value="value"
+                  v-model:value="$store.state.newPost.location"
                   size="small"
-                  :options="options"
+                  :options="$store.getters.locationOptions"
                 />
               </div>
               <div class="menuType">
@@ -145,7 +149,7 @@
                   size="small"
                   :options="options"
                 />
-              </div>
+              </div> 
             </div>
           </div>
           <n-divider />
@@ -162,9 +166,9 @@
               }"
             />
           </div>
-          <div class="tags">
+          <!-- <div class="tags">
             <n-dynamic-tags :value="tags" />
-          </div>
+          </div> -->
 
           <div class="button-container">
             <n-button class="post" type="primary">發布</n-button>
@@ -176,61 +180,17 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import Navbar from "@/components/Navbar";
-import {
-  NDivider,
-  NSelect,
-  NLayout,
-  NLayoutSider,
-  NInput,
-  NButton,
-  NDynamicTags,
-} from "naive-ui";
+// import store from "../store/store.js";
 
 export default defineComponent({
   setup() {
     return {
-      value: ref(null),
-      options: [
-        {
-          label: "Everybody's Got Something to Hide Except Me and My Monkey",
-          value: "song0",
-          disabled: true,
-        },
-        {
-          label: "Drive My Car",
-          value: "song1",
-        },
-        {
-          label: "Norwegian Wood",
-          value: "song2",
-        },
-        {
-          label: "You Won't See",
-          value: "song3",
-          disabled: true,
-        },
-        {
-          label: "Nowhere Man",
-          value: "song4",
-        },
-        {
-          label: "Think For Yourself",
-          value: "song5",
-        },
-      ],
     };
   },
   components: {
-    Navbar,
-    NDivider,
-    NSelect,
-    NLayout,
-    NLayoutSider,
-    NInput,
-    NButton,
-    NDynamicTags,
+    Navbar
   },
 });
 </script>

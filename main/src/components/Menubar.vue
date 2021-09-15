@@ -2,31 +2,14 @@
   <div id="menubar">
     <n-layout has-sider content-style="max-height: 95vh">
       <n-layout-sider :native-scrollbar="false" bordered>
-        <ul>
-          <div class="title">{{ $store.state.carModel.brand }}</div>
+        <ul v-for="brand in $store.state.carModel" :key="brand">
+          <div class="title">{{ brand.brand }}</div>
           <li
-            v-for="model in $store.state.carModel.models"
+            v-for="model in brand.models"
             :key="model"
-            :class="{ active: model == 'RAV4' }"
+            :class="{ active: model == $store.state.currentPage }"
+            @click="$store.state.currentPage = model"
           >
-            {{ model }}
-          </li>
-        </ul>
-        <ul>
-          <div class="title">{{ $store.state.carModel.brand }}</div>
-          <li v-for="model in $store.state.carModel.models" :key="model">
-            {{ model }}
-          </li>
-        </ul>
-        <ul>
-          <div class="title">{{ $store.state.carModel.brand }}</div>
-          <li v-for="model in $store.state.carModel.models" :key="model">
-            {{ model }}
-          </li>
-        </ul>
-        <ul>
-          <div class="title">{{ $store.state.carModel.brand }}</div>
-          <li v-for="model in $store.state.carModel.models" :key="model">
             {{ model }}
           </li>
         </ul>

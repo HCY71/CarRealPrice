@@ -1,6 +1,6 @@
 <template>
   <div id="cards">
-    <div class="card" v-for="post in $store.state.posts.post" :key="post">
+    <div class="card" v-for="post in $store.state.posts" :key="post">
       <div class="header">
         {{ post.author }} | {{ post.menu.location }} | {{ post.menu.car.brand }}
         <div class="date">{{ post.postTime.date }}</div>
